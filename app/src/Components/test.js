@@ -1,5 +1,8 @@
+import { config } from './config.js';
 const request = require('request');
-import config from 'config.js';
+var token = config();
 
-var token = config.MY_API_TOKEN;
-console.log(token);
+finnhubClient.stockCandles("AAPL", "D", 1590988249, 1591852249, {}, (error, data, response) => {
+    console.log(data)
+});
+
